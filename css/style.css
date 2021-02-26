@@ -1,0 +1,477 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+header {
+  font-family: "Raleway", sans-serif;
+}
+
+header nav {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 2rem;
+  align-items: center;
+}
+
+header nav .logo {
+  flex: 2;
+}
+
+header nav .logo img {
+  width: 8rem;
+  height: 2.5rem;
+}
+
+header nav .nav-list {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 40%;
+  flex-direction: column;
+  height: 50vh;
+  transform: translateX(100%);
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 5rem;
+  background-color: black;
+  flex: 1;
+}
+
+header nav .nav-list li {
+  list-style: none;
+}
+
+header nav .nav-list li a {
+  text-decoration: none;
+  color: white;
+}
+
+header nav .burger {
+  cursor: pointer;
+}
+
+header nav .burger .line {
+  margin: 5px;
+  width: 30px;
+  background-color: black;
+  cursor: pointer;
+  height: 3px;
+  border-radius: 10px;
+}
+
+#hero {
+  font-family: "Open Sans", sans-serif;
+}
+
+#hero .container {
+  padding-top: 1rem;
+  width: 90%;
+  margin: 0 auto;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#hero .container .col-1 img {
+  width: 20rem;
+  display: flex;
+  margin: 0 auto;
+  height: 20rem;
+}
+
+#hero .container .col-2 h2 {
+  text-align: center;
+}
+
+#hero .container .col-2 p {
+  text-align: center;
+}
+
+#hero .container .col-2 .heroElements {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+#hero .container .col-2 .heroElements input {
+  height: 2rem;
+}
+
+#hero .container .col-2 .heroElements button {
+  background-color: #3065f8;
+  border: none;
+  color: white;
+  height: 2rem;
+  font-weight: 700;
+}
+
+.nav-list.active {
+  transform: translateX(0%);
+  opacity: 1;
+  display: flex;
+  animation: FadeIn .5s ease-out;
+}
+
+@media (min-width: 1024px) {
+  #hero .container {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  #hero .container .col-1 img {
+    width: 30rem;
+    height: 30rem;
+  }
+  #hero .container .col-2 {
+    display: flex;
+    width: 50%;
+    flex-direction: column !important;
+  }
+  #hero .container .col-2 h2, #hero .container .col-2 p {
+    text-align: start;
+  }
+  #hero .container .col-2 h2 {
+    font-size: 2rem;
+  }
+  #hero .container .col-2 p {
+    line-height: 160%;
+    font-size: 1rem;
+  }
+  #hero .container .col-2 .heroElements {
+    flex-direction: row;
+  }
+  #hero .container .col-2 .heroElements input {
+    width: 20rem;
+  }
+  #hero .container .col-2 .heroElements button {
+    width: 10rem;
+    cursor: pointer;
+  }
+  #about .container {
+    position: relative;
+    left: 10rem;
+    padding-bottom: 7rem;
+    flex-direction: row !important;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+  #about .container .aboutbutton {
+    position: relative;
+    top: 10rem;
+    right: 15rem;
+    width: 20rem;
+  }
+  #access .container {
+    flex-direction: row !important;
+    align-items: center;
+    gap: 5rem;
+  }
+  #access .container .accesscontent {
+    width: 50%;
+    text-align: start;
+  }
+  #access .container .heroElements input {
+    width: 30rem;
+  }
+  #access .container .heroElements button {
+    width: 10rem;
+  }
+  #footer .container {
+    flex-direction: row !important;
+    gap: 5rem;
+    min-width: 90%;
+    justify-content: space-between;
+    display: flex;
+  }
+  #footer .container .logoinfo {
+    margin-right: 10rem;
+  }
+  #footer .container .footernav-1 {
+    margin-right: 5rem;
+  }
+  #footer .container .footernav-2 {
+    margin-right: 5rem;
+  }
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(80%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%);
+  }
+}
+
+@keyframes FadeOut {
+  0% {
+    opacity: 1;
+    transform: translate(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(80%);
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+*, *::after, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+#about {
+  font-family: "Open Sans", sans-serif;
+}
+
+#about .container {
+  padding-top: 10rem;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  line-height: 160%;
+  flex-direction: column;
+}
+
+#about .container .background img {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 160vh;
+  display: flex;
+  margin: 0 auto;
+}
+
+#about .container .col-1 img {
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  margin: 0 auto;
+}
+
+#about .container .col-2 h2 {
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+#about .container .col-2 p {
+  font-weight: 300;
+}
+
+#about .container .aboutbutton {
+  border-bottom: 1px solid #3c9f8f;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 0 auto;
+}
+
+#about .container .aboutbutton a {
+  text-decoration: none;
+  color: #3c9f8f;
+}
+
+#about .container .aboutbutton img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#testimonial {
+  font-family: "Open Sans", sans-serif;
+  height: 50vh;
+}
+
+#testimonial .container {
+  background-color: white;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #a2a2a2;
+}
+
+#testimonial .container .top img {
+  position: relative;
+  left: 1.2rem;
+  top: 2rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+#testimonial .container .middle {
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+}
+
+#testimonial .container .middle p {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+#testimonial .container .bottom {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  bottom: 1rem;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+#testimonial .container .bottom .col-1 img {
+  border-radius: 100px;
+  width: 2rem;
+  height: 2rem;
+}
+
+#testimonial .container .bottom .col-2 {
+  font-weight: 300;
+  line-height: 60%;
+}
+
+#testimonial .container .bottom .col-2 p {
+  font-size: 10px;
+}
+
+#testimonial .container .bottom .col-2 p:first-child {
+  font-weight: 700;
+}
+
+#access {
+  height: 50vh;
+  background-color: #585989;
+  color: white;
+  align-items: center;
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+}
+
+#access .container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#access .container .heroElements {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+#access .container .heroElements input {
+  height: 2rem;
+}
+
+#access .container .heroElements button {
+  background-color: #3065f8;
+  border: none;
+  color: white;
+  height: 2rem;
+  font-weight: 700;
+}
+
+#footer {
+  background-color: #070439;
+  font-family: "Open Sans", sans-serif;
+}
+
+#footer .container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  padding-top: 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#footer .container .logoinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#footer .container .logoinfo img {
+  width: 10rem;
+  height: 3rem;
+}
+
+#footer .container .logoinfo .midlle {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+#footer .container .logoinfo .midlle img {
+  width: 2rem;
+  height: 2rem;
+}
+
+#footer .container .logoinfo .bottom {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+#footer .container .logoinfo .bottom img {
+  width: 2rem;
+  height: 2rem;
+}
+
+#footer .container p {
+  color: white;
+}
+
+#footer .container li {
+  list-style: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+  padding-top: 1rem;
+  right: 2rem;
+}
+
+#footer .container li a {
+  text-decoration: none;
+  color: white;
+}
+
+#footer .container .footericons {
+  display: flex;
+  text-align: center;
+  gap: 2rem;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
+
+#footer .container .footericons i {
+  color: white;
+  border-radius: 20px;
+}
+/*# sourceMappingURL=style.css.map */
